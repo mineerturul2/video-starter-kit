@@ -30,7 +30,8 @@ export function VideoControls() {
   };
   const onSeekToEnd = () => {
     if (!player) return;
-    // player.seekTo(player.getDuration());
+    player.pause();
+    player.seekTo(player.getDurationInFrames());
   };
   const onSeekBackward = () => {
     if (!player) return;
